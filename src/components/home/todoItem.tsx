@@ -38,7 +38,7 @@ export default function TodoItem({ todo }: { todo: Todo }) {
         </h3>
         <p
           className={
-            "line-clamp-2 text-sm text-gray-300" +
+            "line-clamp-2 text-sm text-gray-600 dark:text-gray-300" +
             (todo.completed ? " line-through" : "")
           }
         >

@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: #171717;
   --font-fira: var(--font-fira-code);
 
   --spacing-fill: -webkit-fill-available;
@@ -15,12 +17,12 @@
   --default-transition-duration: 200ms;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 @layer base {
   button {
@@ -35,8 +37,6 @@
   @apply flex justify-center items-center;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-fira);
+.btn {
+  @apply bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-4 py-2 rounded-lg transition-all hover:bg-slate-200 dark:hover:bg-slate-700;
 }

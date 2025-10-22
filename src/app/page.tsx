@@ -5,11 +5,8 @@ import TodoItem from "@/components/home/todoItem";
 export default function Home() {
   return (
     <>
-      <h1 className="text-center text-3xl font-bold my-12">
-        Todo List - Full Stack App
-      </h1>
       <div className="container min-h-screen flex-center">
-        <T.Root className="w-4xl mx-auto my-20">
+        <T.Root className="w-4xl mx-auto my-12">
           <T.Header>
             <T.Row isHead>
               <T.Cell className="flex-1/10 text-start">#</T.Cell>
